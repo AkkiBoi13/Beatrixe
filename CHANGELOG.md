@@ -2,6 +2,16 @@
 
 Beatrixe organizes PDF and EPUB downloads into your library on Windows. Downloads are on the [releases page](https://github.com/AkkiBoi13/Beatrixe/releases).
 
+## 0.1.5 — 14 November 2026
+
+- The new-folder reminder counts only folders a scan can add. With the folder list full at 64, it no longer keeps asking about folders that don't fit.
+- **Browser companion: honest status.** The popup says whether Beatrixe is connected, has no download folder yet, is busy, needs attention or isn't running, and whether the browser helper is missing. It shows the extension and Beatrixe versions and warns when they differ.
+- **Busy retries.** When Beatrixe is busy moving files, the extension keeps trying for about 15 seconds instead of once.
+- **Site labels.** A site you list also covers its subdomains and downloads started from its pages, so mirror and CDN downloads get the label. Only the name you entered is sent.
+- **No 256-download limit.** After 256 downloads in 30 minutes, Beatrixe forgets the oldest label instead of refusing new ones.
+- The extension's version now matches Beatrixe's, and the setup guide links to the latest release.
+- Older browser helpers and extensions keep working with this release. The popup says when the helper is out of date; install the helper and extension from the same release as Beatrixe.
+
 ## 0.1.4 — 14 November 2026
 
 - **Scan your library.** A new Library folders panel at the top of Settings. Scan library folders reads your folders, two levels deep, and the names of the books already in them. Scan another folder copies the structure of a different folder. A dialog shows new folders, folders already in use, and folders that are gone, which you can remove one by one. Nothing changes until you apply it, and a scan never moves, renames or creates files.
