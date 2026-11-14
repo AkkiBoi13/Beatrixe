@@ -2,6 +2,26 @@
 
 Beatrixe organizes PDF and EPUB downloads into your library on Windows. Downloads are on the [releases page](https://github.com/AkkiBoi13/Beatrixe/releases).
 
+## 0.1.6 — 14 November 2026
+
+Fixes from a full review of the app and the browser companion. None of the problems could move, overwrite or delete a book without your approval.
+
+- **Undo can be tried again.** If Undo failed, for example because the book was open in a reader, every later Undo also failed. Now you can try again once the cause is gone.
+- **No stuck History entries after startup.** If your library drive was not available when Beatrixe started, an entry could stay "needs review" for good. Beatrixe now waits and checks again at the next start. A move between drives that is waiting for your cleanup approval stays waiting instead of becoming a conflict.
+- **Scans never offer existing folders for removal.** A folder Beatrixe cannot read, or one beyond the 2,000-folder scan limit, is kept and never ticked for removal. The scan dialog says how many folders could not be read, and top-level folders are always read first.
+- **Personal documents stay private.** Bank statements, receipts, ID scans and study notes in your library are never learned as book titles, so they are never sent as examples with Organize with AI. Only names recognised as books are ever sent as AI examples, and titles learned by earlier versions are checked again before anything is sent.
+- **Folder editor:** typing a new folder's name no longer takes over another folder's subfolders, and renaming a folder carries only its own subfolders.
+- **Browser helper updates:** the setup script now replaces an earlier Beatrixe registration, even from a deleted folder, so updating into a new folder works. BROWSER-SETUP.md has an update section.
+- History no longer stops accepting moves after 4,096 entries; it keeps the latest 4,096 and says so.
+- History names a partial copy left by an interrupted move between drives, so you can find and delete it.
+- The analysis worker runs only inside its memory-limited sandbox, from its first instruction.
+- The tray stays responsive while a large batch of moves is approved.
+- In the scan dialog, unticking a folder gives its subfolders back their own choice, and rule counts say when they include subfolders.
+- Learned titles are kept correctly when you undo a second copy, or when a move finishes while a scan is open, and every folder gets fresh titles even past the 5,000-title limit.
+- Moves no longer each re-read the whole library for the new-folder reminder.
+- Browser companion: requests are served side by side, so one slow request no longer makes others say "Beatrixe is not running". The last-download note is never stale and says the folder watcher may still find a file that was not sent.
+- Folder errors name the folder and say what is wrong.
+
 ## 0.1.5 — 14 November 2026
 
 - The new-folder reminder counts only folders a scan can add. With the folder list full at 64, it no longer keeps asking about folders that don't fit.
